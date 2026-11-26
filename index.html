@@ -45,7 +45,15 @@
   .nav ul{display:flex;gap:2rem;list-style:none;font-size:.9rem}
   .nav ul a:hover{color:var(--gold-2)}
   .nav .btn{padding:10px 22px}
+  .logo,.nav-cta{white-space:nowrap;flex-shrink:0}
   @media(max-width:860px){.nav ul{display:none}}
+  @media(max-width:560px){
+    .nav{height:66px}
+    .logo{font-size:1.2rem;gap:.5rem}
+    .logo img{width:36px;height:36px}
+    .nav .nav-cta{padding:0;width:44px;height:44px;justify-content:center}
+    .nav-cta span{display:none}
+  }
 
   /* hero */
   .hero{min-height:100vh;display:flex;align-items:center;color:#fff;position:relative;
@@ -129,7 +137,7 @@
       <li><a href="#weddings">Weddings & Events</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="btn btn-gold wa" href="#"><svg><use href="#wa"/></svg>Get a Quote</a>
+    <a class="btn btn-gold wa nav-cta" href="#" aria-label="Get a Quote on WhatsApp"><svg><use href="#wa"/></svg><span>Get a Quote</span></a>
   </nav>
 </header>
 
